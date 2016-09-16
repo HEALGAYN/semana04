@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="semana04.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="ContentHead" runat="server">
+     
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentBody" runat="server">
+        <h1>Aqui va el cuerpo</h1>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <%--<div>
+        <asp:ContentPlaceHolder ID="ContentFooter" runat="server">
+            <h4>@Derehos reservados <a href="wwww.facebook.com/">Henry Gallardo</a></h4>
+        </asp:ContentPlaceHolder>
+    </div>--%>
+</body>
+   
+   @Derehos reservados <a href="wwww.facebook.com/">Henry Gallardo</a>
+</html>
