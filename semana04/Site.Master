@@ -4,26 +4,85 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Página Maestra</title>
     <asp:ContentPlaceHolder ID="ContentHead" runat="server">
-     
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #nav {
+            margin:0;
+        }
+        #nav ul {
+            padding:0; /*alinear a la isquierda*/
+            list-style:none; /*sin estilo*/
+        }
+         #nav ul li{
+            float  : left;  
+            text-align:center;
+            width:120px;
+            margin:1px;
+        }
+         #nav ul  li a{
+           color:aqua;
+           text-decoration:none;
+           font-family:'Colonna MT';
+           background:#000000;
+           display:block;
+           padding:10px;
+        }
+         /*aqui mostramos el cursor*/
+         #nav ul li a:hover{
+           background:#808080;
+           color:black;           
+        }
+         /*encajonamos*/
+         #nav ul li ul{
+            display:none;
+        }
+         
+         /*mostramos al pasar el cursor*/
+         #nav ul li:hover ul{
+            display: block;
+        }
+
+        
+    </style>
 </head>
-<body>
+<body>   
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentBody" runat="server">
-        <h1>Aqui va el cuerpo</h1>
-        </asp:ContentPlaceHolder>
-    </div>
+        <%--Aqui esta el menu--%>
+        <div id="nav">
+            <ul>
+                <li><a href="WebForm1.aspx">Primera</a></li>
+                <li><a href="WebForm2.aspx">Segunda</a></li>
+                <li><a href="WebForm3.aspx"">Tercera</a>
+                    <ul>
+                        <li><a href="WebForm4.aspx">Cuarta</a></li>
+                        <li><a href="WebForm5.aspx">Quinta</a></li>
+                        <li><a href="WebForm6.aspx">Sexta</a>
+                            <ul>
+                                <li><a href="WebForm1.aspx">Link extra1</a></li>
+                                 <li><a href="WebForm1.aspx">Link extra2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                 <li><a href="WebForm7.aspx">Help</a></li>
+               </ul>
+        </div>
+        <br /><%--salto de linea--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentBody" runat="server">
+              
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
-    <%--<div>
+    <%-- <div>
         <asp:ContentPlaceHolder ID="ContentFooter" runat="server">
             <h4>@Derehos reservados <a href="wwww.facebook.com/">Henry Gallardo</a></h4>
         </asp:ContentPlaceHolder>
     </div>--%>
 </body>
-   
-   @Derehos reservados <a href="wwww.facebook.com/">Henry Gallardo</a>
+
+@Derehos reservados <%--<a href="wwww.facebook.com/">--%>Henry Gallardo<%--</a>--%>
 </html>
